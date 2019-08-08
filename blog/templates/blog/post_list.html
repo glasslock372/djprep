@@ -1,5 +1,13 @@
 <html>
-    <head>
+   <body>
+    <head></head>
+    {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
 	<div>
     <h1><a href="/">Django Girls Blog</a></h1>
@@ -13,8 +21,7 @@
             <h2><a href="">My second post</a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
         </div>
-    </body>
-</html>        
+       
 
     <h2>Подзаголовок</h2>
     <h3><strong>Заголовок <br />третьего уровня</strong></h3>
@@ -24,14 +31,5 @@
 </div>
 <p><em>A paragraph of text</em></p>
 
-{% for post in posts %}
-    <head>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    </head>
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
+    </body>
+</html> 
